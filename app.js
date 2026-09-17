@@ -71,7 +71,7 @@ function renderCart() {
 
 function formatOrderMessage({ name, address, notes }) {
   const lines = cart.map((line) => { const item = getItem(line.id); const displayName = line.option ? `${item.name} - ${line.option}` : item.name; return `🍽️ ${displayName} × ${line.quantity} — ${money(item.price * line.quantity)}`; });
-  return ["*NEW ORDER — MORODIRHOLOSO ENTERPRISE*", "", ...lines, "", `💰 *TOTAL: ${money(cartTotal())}*`, "", "📍 *DELIVERY DETAILS*", `Name: ${name}`, `Address: ${address}`, notes ? `Note: ${notes}` : ""].filter(Boolean).join("\n");
+  return ["*NEW ORDER — MORODIPHOLOSO ENTERPRISE*", "", ...lines, "", `💰 *TOTAL: ${money(cartTotal())}*`, "", "📍 *DELIVERY DETAILS*", `Name: ${name}`, `Address: ${address}`, notes ? `Note: ${notes}` : ""].filter(Boolean).join("\n");
 }
 
 function submitOrder(event) {
