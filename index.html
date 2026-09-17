@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Morodirholoso Enterprise - delicious home cooked meals in Rustenburg, ready to order on WhatsApp.">
+  <title>Morodirholoso Enterprise | Order fresh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="shell nav">
+      <a class="brand" href="#top"><span class="brand-mark"><span>✦</span></span> Morodirholoso Enterprise</a>
+      <nav class="nav-links" aria-label="Main navigation"><a href="#menu">Our menu</a><a href="#story">Our story</a><a href="#contact">Contact</a></nav>
+      <button class="basket-button" id="open-cart" type="button" aria-label="Open basket">Basket <span class="basket-count" id="basket-count">0</span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="shell hero">
+      <div>
+        <span class="eyebrow">Delicious home cooked meals</span>
+        <h1>Good food, made with love.</h1>
+        <p class="hero-copy">Pasta, pap, wraps, steamed bread and hearty home-style plates prepared fresh for Rustenburg. Choose your favourites and send your order straight to our kitchen.</p>
+        <div class="hero-actions"><a class="primary" href="#menu">Order from the menu</a><span class="hero-note">Fresh home cooked · Rustenburg</span></div>
+      </div>
+      <div class="hero-image" role="img" aria-label="A warm home-cooked meal"><span class="hero-tag">Made with care, served with heart.</span></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="shell">
+        <div class="section-head"><div><span class="eyebrow">Morodirholoso menu</span><h2>Choose your plate.</h2></div><p>Tap a dish to see the details, then add it to your basket when you are ready.</p></div>
+        <div class="filters" id="filters" aria-label="Menu categories"></div>
+        <div class="menu-grid" id="menu-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="story"><div class="shell">© 2026 Morodirholoso Enterprise · WhatsApp +91 9779912753 · Made by <a href="https://magetasoftware-in.vercel.app/" target="_blank" rel="noopener noreferrer">Magtea Software</a>.</div></footer>
+
+  <section class="terms-section" id="terms"><div class="shell"><h2>Terms and conditions</h2><p>Orders are confirmed by WhatsApp after the kitchen receives your message. Please check your items, quantities, delivery address and total before sending. Prices are shown in South African rand. Delivery availability and timing will be confirmed by the kitchen.</p></div></section>
+
+  <div class="overlay" id="detail-overlay" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <div class="panel"><button class="close" type="button" data-close="detail-overlay" aria-label="Close item details">×</button><div id="detail-content"></div></div>
+  </div>
+
+  <div class="overlay" id="cart-overlay" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="panel"><button class="close" type="button" data-close="cart-overlay" aria-label="Close basket">×</button><h2 id="cart-title">Your basket</h2><p class="panel-intro">Tell us where to bring the good stuff. Your order will open in WhatsApp, ready to send.</p><div id="cart-content"></div></div>
+  </div>
+
+  <aside class="added-notice" id="added-notice" aria-live="polite" aria-label="Basket notification">
+    <div class="notice-icon">✓</div><div class="notice-copy"><strong class="notice-title">Added to your basket</strong><span>A tasty choice! Your order is getting lovely.</span></div>
+    <div class="notice-actions"><button type="button" data-basket-action="more">Add more items</button><button type="button" data-basket-action="basket">Go to basket</button></div>
+  </aside>
+</body>
+</html>
